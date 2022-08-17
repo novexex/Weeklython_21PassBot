@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+Deploy:
+  stage: deploy
+  when: manual
+  tags:
+    - blackwoo
+  script:
+    - cd src
+    - scp *.py root@192.168.100.11:/usr/local/bin/
